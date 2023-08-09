@@ -5,19 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormComponent } from './form/form.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { OrderComponent } from './order/order.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { DataHandler } from './shared/service/dataHandler.service';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { DataService } from './shared/service/dataService.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormComponent,
-    ShoppingCartComponent,
-    OrderComponent
+    CartComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import { DataHandler } from './shared/service/dataHandler.service';
     ReactiveFormsModule
   ],
   providers: [
-    DataHandler
+    DataService
   ],
   bootstrap: [AppComponent]
 })

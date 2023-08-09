@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { DataHandler } from '../shared/service/dataHandler.service';
+import { DataService } from '../shared/service/dataService.service';
 
 @Component({
   selector: 'app-form',
@@ -13,12 +13,12 @@ export class FormComponent implements OnInit {
   maxSize: number = 100 * 1024;
   imgUrl: any;
 
-  constructor(private dataServe: DataHandler) { }
+  constructor(private dataServe: DataService) { }
 
   ngOnInit(): void {
     this.formObj = new FormGroup({
-      itemName: new FormControl(null, Validators.required),
-      itemPrice: new FormControl(null, Validators.required),
+      iName: new FormControl(null, Validators.required),
+      iPrice: new FormControl(null, Validators.required),
       ImgPath: new FormControl(null, [Validators.required])
     })
   }
