@@ -20,9 +20,7 @@ export class DataService {
       iImg: "/assets/imgs/papaya.jpg"
     }
   ];
-  private bagArr: any[] = [
-
-  ];
+  private bagArr: any[] = [];
   dataSubject = new BehaviorSubject<any>(this.arr.slice());
   bagDataSubject = new BehaviorSubject<any>(this.bagArr.slice());
 
