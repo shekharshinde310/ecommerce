@@ -21,12 +21,7 @@ export class DataService {
     }
   ];
   private bagArr: any[] = [
-    {
-      iPrice: 25,
-      iName: "jeera",
-      qty: 2,
-      total: 50,
-    }
+
   ];
   dataSubject = new BehaviorSubject<any>(this.arr.slice());
   bagDataSubject = new BehaviorSubject<any>(this.bagArr.slice());
