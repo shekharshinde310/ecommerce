@@ -1,35 +1,49 @@
-.container .card{
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-.container .card-body{
-border: 1px dashed rgb(190, 185, 185);
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    /* Adjust as needed */
 }
 
-.head1{
+.col-4 {
+    padding: 10px;
+    /* Adjust as needed */
+    box-sizing: border-box;
+    flex: 0 0 33.33%;
+    /* 3 cards side by side */
+    max-width: 33.33%;
+    /* 3 cards side by side */
+}
+
+
+/* .head1{
     font-weight: 400;
     margin: 0;
-}
-.per1{
+} */
+/* .per1{
     color: rgb(168,162,162);
-}
+} */
 
-.btnc{
+.btnc {
     height: 50px;
     width: 50%;
     outline: none;
     border: none;
     color: white;
-    background: rgb(20, 219, 20) ;
+    background: rgb(20, 219, 20);
     border-radius: 50px;
     margin: 0a auto;
     display: block;
     transition: all 0.4s;
 }
 
-.btnc:hover{
+.btnc:hover {
     outline: none;
     border: 1px solid rgb(20, 219, 20);
     color: rgb(20, 219, 20);

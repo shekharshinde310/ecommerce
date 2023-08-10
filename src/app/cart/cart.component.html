@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-12">
             <div class="col-4">
@@ -14,6 +14,26 @@
                         </div>
                         <button class="btnc ml-4 mx-auto" (click)="addToCart(i)"> ADD TO CART</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row mt-2">
+    <div class="col-4" *ngFor="let data of recievedData ; let i=index">
+        <div class="card p-2">
+            <div class="card text-center">
+                <img [src]="data.iImg" [alt]="data.iImg" class="img-fluid pb-3">
+                <div class="card-body">
+                    <h4 class="head1 m-1">{{data.iName}}</h4>
+                    <p class="head1 m-1">Price : {{data.iPrice | currency:'INR'}}</p>
+                    <div class="input-group mb-3">
+                        <button (click)="onBtnClick($event)" id="minus">-</button>
+                        <input value="1" type="number" class="form-control text-center" />
+                        <button (click)="onBtnClick($event)" id="plus">+</button>
+                    </div>
+                    <button class="btnc ml-4 mx-auto" (click)="addToCart(i)"> ADD TO CART</button>
                 </div>
             </div>
         </div>
